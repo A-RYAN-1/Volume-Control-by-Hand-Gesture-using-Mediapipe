@@ -79,3 +79,8 @@ C. R. Wren, A. Azarbayejani, T. Darrell, and A. P. Pentland, "Pfinder: Real-time
 Audio Control in Python:
 PyCaw GitHub Repository: PyCaw GitHub
 Real Python, "Working with Audio Files in Python": Real Python Audio Tutorial
+
+## Project Images
+![Python 1](https://github.com/user-attachments/assets/c5544b00-f340-4842-b3c5-a3ae5c100571)
+![Python Two](https://github.com/user-attachments/assets/8efca02c-ae94-4671-a7a0-364bee6b3fcc)
+
