@@ -1,8 +1,8 @@
 '''Important library installation
-cv2 library:For graphical functions and webcam access
-numpy : for kernal calucation i.e. images pixel manipualtion and to adjust ranges accodringly
-math : to perform math function such as distance and pythagoras theorem
-Mediapip : to accesses functions related to hand guesture and screen coordinates 
+cv2 library: for graphical functions and webcam access
+numpy : for kernel calculation i.e. images' pixel manipulation and to adjust their range accordingly
+math : to perform math functions such as distance and Pythagoras theorem
+mediapipe : to access functions related to hand gesture and screen coordinates 
 pycaw and comtypes: to import Audio control abilities
 '''
 import cv2
@@ -13,7 +13,7 @@ import pyautogui
 import math
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
-'''class of handi_cap which makes it a little more organizied to access mediapipe hand coorindates features'''
+'''class of handi_cap which makes it a little more organized to access mediapipe hand coorindates features'''
 class handi_cap():
     def __init__(self) :    
         '''mediapipe object creation'''
@@ -24,11 +24,11 @@ class handi_cap():
         self.hands=self.mphand.Hands()
         '''creates drawing object to display on screen'''
         self.mpdraw=self.sol.drawing_utils
-    '''Trace function takes images as input and traces hand on the webcame frame'''
+    '''Trace function takes images as input and traces hand on the webcam frame'''
     def trace(self,img,connections=True):
         '''converts the image to RGB format'''
         self.img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-        '''processes images and draws the hand on the images using medpip function'''
+        '''processes images and draws the hand on the images using medpipe function'''
         self.result=self.hands.process(self.img)
         '''draws hands only when hands are shown'''
         if self.result.multi_hand_landmarks:
@@ -77,11 +77,11 @@ def main():
         works,image=cap.read()
         '''flip images'''
         image=cv2.flip(image,1)
-        '''return camera error if thier is no camera'''
+        '''return camera error if there is no camera'''
         if works==False:
             print("Camera error")
             break
-        '''traces hands on screen'''
+        '''traces hand on screen'''
         fine=h1.trace(image)
         '''stores landsmarks'''
         lmlist=h1.lmarks(image)
